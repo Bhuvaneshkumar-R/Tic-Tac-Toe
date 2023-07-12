@@ -17,49 +17,49 @@ public class Main
     public static boolean win(char [][]arr)
     {
                 //1st row
-                if((arr[0][0] == arr[0][1]) && (arr[0][1] == arr[0][2]) )
+                if((arr[0][1]!='-')&&(arr[0][0] == arr[0][1]) && (arr[0][1] == arr[0][2]))
                 {
                     return true;
                     
                 }
                 //2nd row
-                else if((arr[1][0] == arr[1][1]) &&(arr[1][1] == arr[1][2]))
+                else if((arr[1][1]!='-')&&(arr[1][0] == arr[1][1]) &&(arr[1][1] == arr[1][2]))
                 {
                     return true;
                     
                 }
                 //3rd row
-                else if((arr[2][0] == arr[2][1]) &&(arr[2][1] == arr[2][2]))
+                else if((arr[2][1]!='-')&&(arr[2][0] == arr[2][1]) &&(arr[2][1] == arr[2][2]))
                 {
                     return true;
                     
                 }
                 //1st column
-                else if((arr[0][0] == arr[1][0]) &&(arr[1][0] == arr[2][0]))
+                else if((arr[1][0]!='-')&&(arr[0][0] == arr[1][0]) &&(arr[1][0] == arr[2][0]))
                 {
                     return true;
                     
                 }
                 //2nd column
-                else if((arr[0][1] == arr[1][1]) && (arr[1][1] == arr[2][1]))
+                else if((arr[1][1]!='-')&&(arr[0][1] == arr[1][1]) && (arr[1][1] == arr[2][1]))
                 {
                     return true;
                     
                 }  
                 //3rd column
-                else if((arr[0][2] == arr[1][2]) && (arr[1][2] == arr[2][2]))
+                else if((arr[1][2]!='-')&&(arr[0][2] == arr[1][2]) && (arr[1][2] == arr[2][2]))
                 {
                     return true;
                     
                 }
                 //left to right diagonal
-                else if((arr[0][0] == arr[1][1]) &&(arr[1][1] == arr[2][2]))
+                else if((arr[1][1]!='-')&&(arr[0][0] == arr[1][1]) &&(arr[1][1] == arr[2][2]))
                 {
                     return true;
                     
                 }
                 //right to left diagonal
-                else if((arr[0][2] == arr[1][1]) &&(arr[1][1] == arr[2][0]))
+                else if((arr[1][1]!='-')&&(arr[0][2] == arr[1][1]) &&(arr[1][1] == arr[2][0]))
                 {
                     return true;
                 
@@ -111,14 +111,13 @@ public class Main
         // win trick
         if(win(arr))
         {
-            System.out.println("win");
+            System.out.println(arr[row][col]+ " " + "wins the match");
             break;
         }
         if(i==9)
         {
             System.out.println("Draw");
         }
-        }
-        
+        }    
     }
 }
